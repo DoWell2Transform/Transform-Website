@@ -1,0 +1,104 @@
+@import "utilities/variable.scss";
+*{
+  box-sizing: border-box; 
+}
+
+:root {
+  --main-lightyellow:  rgb(253, 212, 165);
+  --main-yellow: rgb(208, 161, 68); 
+  /* --main-lightyellow:  rgb(255, 250, 104);
+  --main-yellow: rgb(250, 233, 140);  */
+  --main-darkyellow: rgb(136, 126, 73);
+
+  --blue: rgb(255, 111, 0);
+
+  --pink: rgb(125, 167, 73);
+  --pink-light: rgb(178, 237, 105);
+  /* --red: rgb(255,102,102); */
+  --red:   rgb(26, 255, 0);
+  /* --red :  rgb(219,13,64); */
+  --red-dark: rgb(37, 92, 31);
+  /* --red: rgb(24,24,24); */
+  --light-black: rgb(24,24,24);
+  --black: black;
+  --black-transparent: rgba(0, 0, 0, 0.73);
+
+  --main-padding: 15px;  
+
+  --tablet-point:  1005px;
+  --phone-point:  705px;
+}
+
+
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+.App {
+  text-align: center;
+  font-family: "Lucida Console", Courier, monospace;
+  font-weight: 600;
+  min-height: 100vh;
+  /* height: 100vh; */
+  background-image: url('./images/Softball-big.jpg');
+  background-image: url('./images/softball-field-background.jpg');
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container{
+  padding: 55px 5%;
+  padding-top: 0;
+  height: 91%;
+  /* background-color: var(--red); */
+  /* background-image: url('./images/behind-the-plate.jpg');
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center; */
+}
+
+.container-after{
+  background: var(--black-transparent);
+  height: 100%; 
+  padding-top: .1px;  
+  color: white;
+}
+.button-main{
+  font-family: 'Luckiest Guy', cursive;
+  background-color: var(--main-yellow);
+  border: 4px solid var(--red);
+  /* border-style: groove; */
+  padding: 8px 75px 10px;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: bold;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+.button-main:focus{
+  outline: none;
+}
+.button-main:hover{
+  background: var(--main-lightyellow);
+  color: var(--red);
+  border: 4px solid var(--red);
+  box-shadow: 0px 0px 15px 8px rgba(0,0,0, .575);
+  cursor: pointer;
+}
+.button-main:active{
+  background:   var(--main-darkyellow);
+  color:  white;
+}
+
+
+
+
+
