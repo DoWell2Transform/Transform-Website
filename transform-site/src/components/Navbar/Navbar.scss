@@ -11,33 +11,38 @@
 } */
 
 .Navbar{
-    background: transparent;
+    position: fixed;
+    width:100%;
+    background: var(--main-darkyellow);
     min-height: 9%;
     padding: 10px 5px 20px;
-    /* display: flex; */
-    font-family: 'Luckiest Guy', cursive;
-
+    display:flex;
+    font-family:Verdana ;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
 }
 
 .Navbar .Navbar-items{
     background: var(--main-lightyellow);
-    border: 4px solid var(--red);
-    box-shadow: 0 0 20px white;
+    // border: 4px solid var(--red);
+    box-shadow: 0 5px -10px var(--white);
     width: auto;
-    margin: 0 auto;
+    // margin: 0 auto;
     margin-top: 12px;
     padding: 0;
-    border-radius: 15px;
+    border-radius: 3px;
     display: inline-block
 }
 .Navbar .Navbar-items a{
     text-decoration: none;
-    background: var(--main-yellow);
-    color: black;
+    background: var(--main-lightyellow);
+    color: white;
+    border-radius: 0;
     font-size: 1.2rem;
     padding: 6px 20px 8px;
     display: inline-block;
-    border-right: 2px solid var(--red);
+    // border-right: 2px solid var(--red);
     transition: all 0.3s;
 }
 .Navbar .Navbar-items a::selection {
@@ -46,31 +51,39 @@
 }
 
 .Navbar .Navbar-items a:hover{
-    background: var(--main-lightyellow);
+    background: linear-gradient(var(--main-yellow) 60%, var(--main-lightyellow));
     color: var(--red);
 
 }
 .Navbar .Navbar-items a:active{
     background:   var(--main-darkyellow);
-    color:  white;
+    color:  var(--text-white);
 }
 .Navbar .Navbar-items a:first-child{
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 .Navbar .Navbar-items a:last-child{
     border-right:   none;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 .Navbar .Navbar-items .events span{
     font-size: .8rem;
-    font-family: "Lucida Console", Courier, monospace;
+    font-family:Verdana ;
     text-decoration: underline;
 }
+
 .Navbar .Navbar-items .events span::selection{
     color: none;
     background: none;
+}
+
+#Layer_Pedal{
+    margin-right:15px;
+}
+#contact{
+    padding: 1px;
 }
 
 // Tablet styles
@@ -78,11 +91,12 @@
 
 @media (max-width: 860px){
     .Navbar{
-        min-height: 100px;
+        min-height: 90px;
         .Navbar-items{
             display: none;
-            background: red
+            // background: red
         }
+        background-color: transparent;
     }
 }
 .menu-div{
@@ -90,6 +104,7 @@
     left: 0;
     top: 0px;
     z-index: 200;
+    opacity: 1;
     // width: 100vw;
 }
 

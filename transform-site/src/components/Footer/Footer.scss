@@ -7,10 +7,11 @@ import twitterIcon from '../../images/social/twitter.png'; */
     /* height: 440px; */
     margin: 0 5%;
     background-color: var(--black-transparent);
-    color: white;
+    color: var(--text-white);
     display:flex;
     flex-direction: column;
     justify-self: flex-end;
+    
 
 }
 .Footer .footer-section{
@@ -79,16 +80,16 @@ import twitterIcon from '../../images/social/twitter.png'; */
     background-color: var(--black-transparent);
     border: 2px solid var(--red);
     outline-style: solid;
-    outline-color: white;
+    outline-color: var(--white);
     outline-width: 2px;
     padding: 10px;
-    color: white;
+    color: var(--text-black);
     font-size: .9rem;
     width: 200px;
 }
 .Footer .sub-input button{
     padding: 5px 0;
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px var(--black);
     font-size: 1rem;
     border-radius: 6px;
     width: 100px;

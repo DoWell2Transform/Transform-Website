@@ -1,1 +1,31 @@
 $phone: 768px;
+
+
+:root {
+    --main-lightyellow:  rgb(127, 185, 141);;
+    --main-yellow: rgb(93, 135, 103);; 
+    /* --main-lightyellow:  rgb(255, 250, 104);
+    --main-yellow: rgb(250, 233, 140);  */
+    --main-darkyellow: rgb(127, 185, 141);
+    --blue: rgb(248, 159, 115);
+  
+    --pink: rgb(125, 167, 73);
+    --pink-light: rgb(178, 237, 105);
+    /* --red: rgb(255,102,102); */
+    --red:   rgb(248, 159, 115);//#7fb98d;
+    /* --red :  rgb(219,13,64); */
+    --red-dark: rgb(248, 159, 115);
+    /* --red: rgb(24,24,24); */
+    --light-black: black;
+    --black: black;
+    --white: white;
+    --text-white: white;
+    --text-black:black;
+    --black-transparent: rgba(0, 0, 0, 0.8);
+  
+    --main-padding: 15px;  
+  
+    --tablet-point:  1005px;
+    --phone-point:  705px;
+  }
+  

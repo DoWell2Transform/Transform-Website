@@ -4,58 +4,74 @@
     padding: 100px 0;
 }
 
-.Contact .contact-container{
-    background: rgba(0, 0, 0, 0.45);
+.contact-container{
+    background: rgba(0, 0, 0, 0.88);
     border: 3px solid var(--red);
-    outline: 3px solid white;
-    width: 90%;
-    max-width: 600px;
-    margin:  60px auto;
+    outline: 3px solid var(--white);
+    border-radius: 2px;
+    width: 78%;
+    // max-width: 600px;
+    margin:  35px auto;
+    box-shadow: 0px -50px 450px 40px var(--red);
+    margin-top: -90px;;
 }
-.Contact .contact-container h2{
-    font-size: 3.6rem;
-    text-shadow: -5px 0px 0px white;
-    padding: 10px 30px;
-    color: var(--red);
-    border-bottom: 2px solid var(--red);
-    padding: 20px 0 20px;
-    margin: 0 0 40px;
+.contact-container h2{
+    font-size: 3rem !important;
+    // text-shadow: -5px 0px 0px var(--white);
+    // padding: 10px 30px;
+    // color: var(--red);
+    // border-bottom: 2px solid var(--red);
+    // padding: 20px 0 20px;
+    // margin: 0 0 40px;
     
   }
 
-.Contact .contact-section{
-    margin:35px;
+.contact-section{
+    margin: 35px;
+    display: flex;
+    justify-content: center;
 }
-.Contact .contact-section .contact-info{
+
+.contact-section .contact-info{
     display: flex;
     margin: 20px 0;
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    min-width:230px;
 }
-.Contact .contact-section input{
+
+.contact-section input{
+    
     // width: 33%;
     flex-direction: flex-start;
-    background-color: var(--black-transparent);
-    border: 2px solid var(--red);
+    // background-color: var(--black-transparent);
+    border: none;
     // outline-style: solid;
     // outline-color: white;
     // outline-width: 2px;
     padding: 7px 0 7px 8px;
-    color: white;
+    color: var(--text-white);
     font-size: 1.15rem;
     // width: 200px;
     max-height: 46px;
     text-align: center;
+    background-color: inherit;
 }
-.Contact .contact-section .label{
-    margin: 0 30px 0 0;
-    width: 185px;
-    background: var(--black-transparent);
+.contact-section input:focus{
+    border:none;
+    outline: none;
+}
+.contact-section .label{
+    // margin: 0 30px 0 0;
+    // width: 185px;
+    // background: var(--black-transparent);
+    background-color: inherit;
     padding: 10px 8px 5px;
     border-bottom : 2px solid var(--red);
-    box-shadow: -1px -5px 15px var(--black-transparent);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    // box-shadow: -1px -5px 15px var(--black-transparent);
+    // border-top-right-radius: 20px;
+    // border-top-left-radius: 20px;
     font-size: 1.2rem;
 }
 
@@ -75,17 +91,17 @@
     align-items: center;
     button{
         background-color: var(--black-transparent);
-        border: 2px solid var(--red);
+        // border: 2px solid var(--red);
         font-size: .8rem;
         width: 60px;
         padding:  0 2px;
         height: 45px;
         margin-left: 10px;
-        color: white;
+        color: var(--text-white);
     }
     #mailInput{
         font-size: 1.1rem;
-        background: white;
+        background: var(--white);
         padding: 5px 10px;
         border-radius: 5px;
     }
@@ -136,7 +152,7 @@
 // ========================
 
 @media (max-width: $phone){
-    .Contact .contact-section {
+    .contact-section {
         input{
             font-size: 1rem;
             padding-top: 10px;

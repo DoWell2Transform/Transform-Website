@@ -1,109 +1,132 @@
 import React from 'react';
 import './Home.scss';
+import '../Contact/Contact.scss';
 
-import EqupmentPile from '../../images/equipment-pile.jpg';
-import MitGlove from '../../images/mit-glove.jpg';
-import Sillouete from '../../images/silouette-player.png';
+import SVGsection from '../SVG/SVG.js';
+import aboutImg from '../../images/wheel.png'
+import wholeImg from '../../images/wholeistic.jpg'
+import testImg from '../../images/train-partners-circle.jpg'
+import zenImg from '../../images/zen-rocks.jpg'
+// import {Email} from 'https://smtpjs.com/v3/smtp.js'
+
+function sendEmail(data) {
+  let link = `mailto:d.omalley@sbcglobal.net?subject=${data.name}'s Inquiry&body=${data.message}`
+    // window.scrollTo(0,0)
+    window.open(link, "_blank");
+}
 
 function Home(props) {
     function buttonPress(link) {
-        window.scrollTo(0, 0)
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      })
         props.history.push(link)
     }
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      let data = {};
+      let myForm = new FormData(document.getElementById('contanctForm'))
+      for (var pair of myForm.entries()) {
+        data[pair[0]] = pair[1]
+    }
+    //   console.log(event,myForm.entries().length)
+    //   alert(`The name you entered was: ${''}`)
+      sendEmail(data)
+      
+    }
+  
+
     return (
-        <div className="Home">
-            {/* <div class="rollingContainer svgContainer">
-                    <svg width="100%" height="300" viewBox="0 0 800 1000">
-                        <g id="softballGroup2">
-                        <circle cx="200" cy="200" r="150" fill="yellow" stroke="#FF0082" stroke-width="10" />
-                        <path d="M90,95 Q200,135 90,310" fill="none" stroke="#FF0082" stroke-dasharray="15 15" stroke-width="10" />
-                        <path d="M310,95 Q200,135 310,310" fill="none" stroke="#FF0082" stroke-dasharray="15 15" stroke-width="10" />
-                        </g>
-                    </svg>
-                </div> */}
-            
-            <h1><span>Softball Science</span><span>&</span><span>Stricker Softball</span></h1>
-            {/* <div class="svgBar">
-                <div class="dnaContainer svgContainer">
-                    <svg fill="#FF0082" height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
-                        viewBox="0 0 511.999 511.999" stroke="#000000">
-                        <g id="dnaGroup">
-                            <g>
-                                <path d="M506.231,132.672c-7.688-7.689-20.157-7.69-27.849-0.001c-26.971,26.971-81.458,26.26-119.149,20.095
-                                    c-2.708-16.561-4.355-36.332-3.079-55.586l30.692,30.691c1.145,1.145,2.669,1.835,4.286,1.915
-                                    c12.058,0.592,25.012,0.217,36.898-1.889c5.204-0.922,7.177-7.362,3.441-11.1L366.665,51.99
-                                    c3.302-6.936,7.463-13.173,12.665-18.373c7.691-7.691,7.691-20.158,0-27.849c-7.689-7.69-20.158-7.69-27.849,0
-                                    c-33.892,33.89-39.264,92.231-33.357,139.777c-48.006-5.627-105.179-1.239-139.499,33.079
-                                    c-34.333,34.332-38.711,91.477-33.078,139.517c-47.448-5.847-105.971-0.47-139.779,33.339c-7.69,7.689-7.69,20.158,0,27.849
-                                    c7.688,7.69,20.157,7.69,27.849,0c5.204-5.204,11.439-9.367,18.37-12.669l64.769,64.769c3.71,3.71,10.114,1.795,11.08-3.363
-                                    c1.936-10.333,2.813-22.646,2.169-36.684c-0.075-1.627-0.769-3.17-1.921-4.322l-30.91-30.91
-                                    c19.334-1.279,39.169,0.39,55.707,3.102c5.306,31.63,8.262,90.656-20.212,119.129c-7.69,7.689-7.69,20.158,0,27.849
-                                    c7.69,7.692,20.158,7.69,27.849,0c34.052-34.051,39.176-92.539,33.394-139.492c47.65,5.762,106.123-0.026,139.462-33.364
-                                    c38.189-38.187,37.438-102.472,33.061-139.653c43.54,5.157,104.524,2.068,139.796-33.204
-                                    C513.922,152.83,513.922,140.362,506.231,132.672z M305.526,305.528c-26.971,26.971-81.459,26.259-119.149,20.095
-                                    c-2.708-16.559-4.355-36.331-3.079-55.586l30.69,30.69c1.146,1.145,2.67,1.835,4.289,1.915c12.19,0.597,25.089,0.203,36.896-1.889
-                                    c5.204-0.922,7.177-7.362,3.441-11.099l-64.807-64.807c6.899-14.494,16.53-24.132,31.036-31.042l64.761,64.76
-                                    c3.738,3.738,10.168,1.763,11.101-3.441c2.146-11.973,2.531-24.698,1.936-36.846c-0.079-1.617-0.769-3.143-1.915-4.289
-                                    l-30.696-30.696c19.268-1.275,39.047,0.378,55.591,3.084C331.795,224.132,332.457,278.596,305.526,305.528z"/>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <div class="beakerContainer svgContainer">
-                    <svg fill="#FF0082" height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
-                        viewBox="0 0 512 512" stroke="#000000">
-                        <g id="beakerGroup">
-                            <g>
-                                <path d="M352.213,170.188V39.385h15.369c10.875,0,19.692-8.817,19.692-19.692C387.274,8.817,378.457,0,367.582,0
-                                    c-5.156,0-208.595,0-223.043,0c-10.875,0-19.692,8.817-19.692,19.692c0,10.875,8.817,19.692,19.692,19.692h15.369
-                                    c0,13.039,0,116.914,0,130.804C3.377,266.065,69.779,512,256.06,512C440.663,512,509.517,266.538,352.213,170.188z
-                                    M208.937,394.321c-9.426,0-17.068-7.642-17.068-17.068c0-9.427,7.642-17.068,17.068-17.068s17.068,7.642,17.068,17.068
-                                    S218.363,394.321,208.937,394.321z M287.13,410.374c-18.293,0-33.123-14.83-33.123-33.123s14.83-33.123,33.123-33.123
-                                    c18.293,0,33.123,14.83,33.123,33.123C320.253,395.546,305.425,410.374,287.13,410.374z M126.658,262.038
-                                    c13.56-26.66,35.277-48.894,62.091-62.959c6.483-3.4,10.545-10.118,10.545-17.438v-24.956h26.134
-                                    c10.875,0,19.692-8.817,19.692-19.692c0-10.875-8.817-19.692-19.692-19.692h-26.134V98.035h26.134
-                                    c10.875,0,19.692-8.817,19.692-19.692c0-10.875-8.817-19.692-19.692-19.692h-26.134V39.385h113.533V181.64
-                                    c0,7.322,4.062,14.038,10.545,17.438c26.815,14.066,48.531,36.3,62.091,62.959H126.658z"/>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                
-                
-            </div> */}
-            
-            <h2>Coaching and lessons for all levels</h2>
-            <div className='buttons'>
-                <button className='button-main' onClick={() => buttonPress('/events')}>Clinics</button>
-                <button className='button-main' onClick={() => buttonPress('/lessons')}>Lessons</button>
-            </div>
-            
-            <div className='buttons-bottom'>
-                <button className='button-main' onClick={() => buttonPress('/meetthecoach')}> Coaches</button>
-            </div>
-            <p class='science-paragraph'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Softball Science was created by 2 Women who have a vast
-history in the softball realm of today's world. Let’s face it
-technology has become a part of our whole world. We have
-taken our over 30 years of coaching experience along with our
-experience in the technology field, available to us and brought
-them together to create Softball Science.
+        <div id="home">
+  <section id="home-container">
+    <div class="hero">
+      <h1>Do Well 2 Transform</h1>
+      <SVGsection />
+      <p>Unlock your physical potential and discover the power of your subconscious mind.</p>
+      <a href="#contact" class="btn">Book a Session</a>
+    </div>
+  </section>
 
-At Softball Science we have created a metrically driven program
-specifically designed to enhance the raw power behind your
-softball swing. All we need from you is to bring YOUR swing from
-your instructor and we will teach your body to supply the power!
-Our Vision is to let softball players believe in themselves and
-support them in every aspect of the game, physically and
-mentally. We will show them the science of bringing both aspects
-to the field with them as they go through their softball journey!</p>
-            <div className='images' >
-                <img src={EqupmentPile} alt='equipment-pile' />
-                <img src={MitGlove} alt='mit-glove' />
-            </div>
-            <h2>Take a look at our Clinics</h2>
-            <img className='sillouete' src={Sillouete} alt='sillouete' />
+  <section id="about">
+    <div class="about-container">
+    <img src={aboutImg} alt="Hypnotherapist"/>
+      <div><h2>About</h2>
+      <p>Here at DoWell2Transform we help people reach their physical and non-pysical potential through well researched practices and personalized training plans built by proffesionals with several years of work experience in the fitness industry.</p>
+      </div>
+      
+    </div>
+  </section>
 
+  <section id="services">
+    <div class="services-container">
+      <h2>Services</h2>
+      <ul>
+        <li>Personal Trainer</li>
+        <li>Work life Balance</li>
+        <li>Hypnotherapist</li>
+        <li>Spirituality</li>
+      </ul>
+      <p>Choose a service that suits your needs and take the first step towards positive change.</p>
+    </div>
+  </section>
+  
+
+  <section id="testimonials">
+    <div class="testimonials-container">
+    
+      <div>
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+          {/* <img src={testImg} alt="Client"/> */}
+          <p>Exceptional Expertice, the fitness training and mindfulness advice i got for my players really impacted their ability to get to the next level!</p>
+          <p class="client-name">- Sue Stricker, softball coach</p>
         </div>
+        <div class="testimonial">
+          {/* <img src="client2.jpg" alt="Client"> 
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut risus non ante vulputate tincidunt.
+            Maecenas sit amet ante at enim malesuada faucibus.</p>
+            <p class="client-name">- Jane Smith</p>*/}
+        </div>
+      </div>
+      <div class="testimonial-image"><img src={testImg} alt="training-group"/> </div>
+    </div>
+  </section>
+  <section id="wholeistic">
+    <div class="wholeistic-container">
+    {/* <img src={wholeImg} alt="wholistict image"/> */}
+    <div class="zen-image-container"><img src={zenImg} alt="zen rocks image"/></div>
+    <div class="zen-empty"></div>
+  </div>
+  </section>
+  <section id="contact">
+    
+    <div class="contact-container">
+      <h2>Contact</h2>
+      <p>Ready to transform your life? Contact us to book a session or for any inquiries.</p>
+      <div className='contact-section'>
+      <div className='contact-info'>
+          <p className='label'>Send an email:</p>
+          <input type="text" className='data' id='mailInput' value='d.omalley@sbcglobal.net' readOnly={true} />
+      </div>
+      <div className='contact-info'>
+          <p className='label'>Call or Text:</p>
+          <input type="text" className='data' value='630-669-8809' readOnly={true} />
+      </div>
+    </div>
+      <form id="contanctForm" onSubmit={handleSubmit}>
+        <input name="name" type="text" placeholder="Name" required />
+        {/* <input name="email" type="email" placeholder="Email" required /> */}
+        <textarea rows="5" name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="btn send-btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  
+  </div>
     );
 }
 

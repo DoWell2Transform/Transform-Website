@@ -15,12 +15,22 @@ function App (props){
     
     function handleLinkClick(link) {
       setMenuOpen(false);
-      window.scrollTo(0,0)
+      
       // window.location.href = link
       let stateObj = { id: "100" };
 			
 			window.history.replaceState(stateObj,
 					"Page", link);
+          let behavior = link.includes('home')||link.includes('contact')?'auto':'smooth';
+      if(link.includes('/#')){
+        document.getElementById(link.split('/#')[1]).scrollIntoView({ behavior: behavior});
+      }else{
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        })
+      }
     }
 
     
@@ -121,7 +131,7 @@ function MenuItem (props){
         padding: '1.2rem 0',
         margin: '0 5%',
         cursor: 'pointer',
-        color: 'black',
+        color: 'white',
         transition: 'color 0.2s ease-in-out',
         animation: '0.5s slideIn forwards',
         animationDelay: props.delay,
@@ -130,7 +140,7 @@ function MenuItem (props){
     line: {
         width: '90%',
         height: '2px',
-        background: textColor,
+        background: 'var(--red)',
         margin: '0 auto',
         animation: '0.5s shrink forwards',
         animationDelay: props.delay,
@@ -195,7 +205,7 @@ function Menu (props){
   /* MenuButton.jsx */
 function MenuButton (props){
     let [open, setOpen] = useState(props.open ? props.open : false)
-    let [color, setColor] = useState('black')
+    let [color, setColor] = useState('white')
   
 
     useEffect( () => {
@@ -219,8 +229,6 @@ function MenuButton (props){
           padding: '4px',
           color: textColor,
           margin: '0 auto',
-          borderRight: `2px solid ${textColor}`,
-          borderLeft: `2px solid ${textColor}`,
           borderRadius: '5px',
           paddingLeft: open ? '14px':'4px',
 
@@ -256,7 +264,7 @@ function MenuButton (props){
         <div style={styles.container} 
           onClick={ props.onClick ?  props.onClick: 
             ()=> { handleClick();}}>
-              <div style={styles.menuText} >MENU</div>
+              <div style={styles.menuText} ></div>
           <div style={{...styles.line,...styles.lineTop}}/>
           <div style={{...styles.line,...styles.lineMiddle}}/>
           <div style={{...styles.line,...styles.lineBottom}}/>

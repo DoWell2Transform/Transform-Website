@@ -35,8 +35,8 @@ function Contact() {
                     <div className='contact-info'>
                         <p className='label'>Send an email:</p>
                         <input type="text" className='data' id='mailInput' value='sftbllcoach@gmail.com' readOnly={true} />
-                        <div className='mail-div'>
-                            {/* <img src={mail} className='gitLogo mail' target="_blank" onClick={() => setMail(!showMail)} /> */}
+                        {/* <div className='mail-div'>
+                            {/* <img src={mail} className='gitLogo mail' target="_blank" onClick={() => setMail(!showMail)} /> 
                             <div className='mail-text'>
 
                                 <div className="tooltip">
@@ -47,7 +47,7 @@ function Contact() {
                                 </div>
 
                             </div>
-                        </div>
+                        </div> */}
 
                     </div>
                     <div className='contact-info'>
