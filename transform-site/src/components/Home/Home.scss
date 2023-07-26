@@ -87,7 +87,9 @@ background-size: cover;
   padding: 10px 20px;
   border-radius: 5px;
 }
-
+.btn:hover{
+  cursor: pointer;
+}
 .about-container {
   text-align: center;
   padding: 100px 15px;

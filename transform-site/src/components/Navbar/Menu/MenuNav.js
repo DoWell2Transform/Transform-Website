@@ -21,7 +21,7 @@ function App (props){
 			
 			window.history.replaceState(stateObj,
 					"Page", link);
-          let behavior = link.includes('home')||link.includes('contact')?'auto':'smooth';
+          let behavior = 'smooth';
       if(link.includes('/#')){
         document.getElementById(link.split('/#')[1]).scrollIntoView({ behavior: behavior});
       }else{

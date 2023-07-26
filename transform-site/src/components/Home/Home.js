@@ -14,6 +14,18 @@ function sendEmail(data) {
     // window.scrollTo(0,0)
     window.open(link, "_blank");
 }
+function handleSessionClick(link='/#contact') {
+  let behavior = 'smooth';
+  if(link.includes('/#')){
+      document.getElementById(link.split('/#')[1]).scrollIntoView({ behavior: behavior});
+    }else{
+      window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        })
+    }
+}
 
 function Home(props) {
     function buttonPress(link) {
@@ -46,7 +58,7 @@ function Home(props) {
       <h1>Do Well 2 Transform</h1>
       <SVGsection />
       <p>Unlock your physical potential and discover the power of your subconscious mind.</p>
-      <a href="#contact" class="btn">Book a Session</a>
+      <a onClick={()=>{ handleSessionClick();}} class="btn">Book a Session</a>
     </div>
   </section>
 

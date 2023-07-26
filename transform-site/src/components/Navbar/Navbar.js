@@ -9,7 +9,7 @@ function Navbar(props) {
 
     function handleMenuClick(link) {
         setMenuOpen(!menuOpen)
-        let behavior = link.includes('home')||link.includes('contact')?'auto':'smooth';
+        let behavior = 'smooth';
         if(link.includes('/#')){
             document.getElementById(link.split('/#')[1]).scrollIntoView({ behavior: behavior});
           }else{
@@ -22,7 +22,7 @@ function Navbar(props) {
     }
     function handleMenuClick(link) {
         setMenuOpen(false)
-        let behavior = link.includes('home')||link.includes('contact')?'auto':'smooth';
+        let behavior = 'smooth';
         if(link.includes('/#')){
             document.getElementById(link.split('/#')[1]).scrollIntoView({ behavior: behavior});
           }else{
