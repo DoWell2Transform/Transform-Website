@@ -151,7 +151,7 @@
 // phone styles 
 // ========================
 
-@media (max-width: 800px){
+@media (max-width: $phone){
     .contact-section {
         input{
             font-size: 1rem;
