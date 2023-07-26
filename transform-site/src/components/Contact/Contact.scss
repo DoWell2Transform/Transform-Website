@@ -38,7 +38,7 @@
     justify-content: center;
     flex-direction: column;
     width: 20%;
-    min-width:230px;
+    min-width:300px;
 }
 
 .contact-section input{
@@ -151,7 +151,7 @@
 // phone styles 
 // ========================
 
-@media (max-width: $phone){
+@media (max-width: 800px){
     .contact-section {
         input{
             font-size: 1rem;
