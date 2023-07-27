@@ -93,7 +93,7 @@ function Home(props) {
         <h2>Testimonials</h2>
         <div class="testimonial">
           {/* <img src={testImg} alt="Client"/> */}
-          <p>Exceptional Expertice, the fitness training and mindfulness advice i got for my players really impacted their ability to get to the next level!</p>
+          <p>Exceptional Expertise, the fitness training and mindfulness advice i recived from Coach Dotty for my players really impacted their ability to get to the next level!</p>
           <p class="client-name">- Sue Stricker, softball coach</p>
         </div>
         <div class="testimonial">
