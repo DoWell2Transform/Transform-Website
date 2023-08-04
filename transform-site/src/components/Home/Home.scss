@@ -92,7 +92,7 @@ background-size: cover;
 }
 .about-container {
   text-align: center;
-  padding: 100px 15px;
+  padding: 100px 15px 10px;
   display: flex;
   justify-content: space-around;
 }
@@ -108,8 +108,8 @@ background-size: cover;
   max-height:400px;
   max-width:400px;
   aspect-ratio: 1 1;
-  margin-top:-120px;
-  margin-bottom:-120px;
+  margin-top:-60px;
+  margin-bottom:30px;
   max-width: 100%;
     object-fit: contain;
 }

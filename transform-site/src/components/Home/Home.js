@@ -66,7 +66,7 @@ function Home(props) {
     <div class="about-container">
     <img src={aboutImg} alt="Hypnotherapist"/>
       <div><h2>About</h2>
-      <p>Here at DoWell2Transform we help people reach their physical and non-pysical potential through well researched practices and personalized training plans built by proffesionals with several years of work experience in the fitness industry.</p>
+      <p>Do Well 2 Transform features transformational  support coaching services & hypnosis for the Mind, Body and Spirit.   A Coaching Collaboration for those who seek meaningful change.  We begin with an understanding of your goals and desired outcomes -  and through hypnosis and wellness coaching - support your journey to peak performance.   We construct opportunities to make positive, powerful change leaving behind limiting beliefs, unproductive patterned thoughts and inefficient behaviors that distract and detract from a person's full potential and full enjoyment of life endeavors. </p>
       </div>
       
     </div>
