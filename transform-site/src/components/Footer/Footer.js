@@ -32,7 +32,7 @@ function Footer(props) {
             <div className='footer-section'>
                 <div className='sub-section copyright'>
                     <div className='sub-container'>
-                        <span>&copy; 2023 Do Well 2 Transform. All rights reserved. | Privacy Policy | Terms of Service</span></div>
+                        <span>&copy; {new Date().getFullYear()} Do Well 2 Transform®. All rights reserved. | Privacy Policy | Terms of Service</span></div>
                 </div>
                 <div className='sub-section social'>
                     <div className='sub-container'>

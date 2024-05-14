@@ -66,7 +66,7 @@ function Home(props) {
     <div class="about-container">
     <img src={aboutImg} alt="Hypnotherapist"/>
       <div><h2>About</h2>
-      <p>Do Well 2 Transform features transformational  support coaching services & hypnosis for the Mind, Body and Spirit.   A Coaching Collaboration for those who seek meaningful change.  We begin with an understanding of your goals and desired outcomes -  and through hypnosis and wellness coaching - support your journey to peak performance.   We construct opportunities to make positive, powerful change leaving behind limiting beliefs, unproductive patterned thoughts and inefficient behaviors that distract and detract from a person's full potential and full enjoyment of life endeavors. </p>
+      <p>Do Well 2 Transform® features transformational support coaching services & hypnosis for the Mind, Body and Spirit.   A coaching collaboration for those who seek meaningful change.  We begin with an understanding of your goals and desired outcomes -  and through hypnosis and wellness coaching - support your journey to peak performance.   We construct opportunities to make positive, powerful change leaving behind limiting beliefs, unproductive patterned thoughts and inefficient behaviors that distract and detract from a person's full potential and full enjoyment of life endeavors. </p>
       </div>
       
     </div>
@@ -77,7 +77,7 @@ function Home(props) {
       <h2>Services</h2>
       <ul>
         <li>Personal Trainer</li>
-        <li>Work life Balance</li>
+        <li>Work-life Balance</li>
         <li>Hypnotherapist</li>
         <li>Spirituality</li>
       </ul>
@@ -93,7 +93,7 @@ function Home(props) {
         <h2>Testimonials</h2>
         <div class="testimonial">
           {/* <img src={testImg} alt="Client"/> */}
-          <p>Exceptional Expertise, the fitness training and mindfulness advice i recived from Coach Dotty for my players really impacted their ability to get to the next level!</p>
+          <p>Exceptional expertise, the fitness training and mindfulness advice i received from coach Dotty for my players greatly impacted their ability to get to the next level!</p>
           <p class="client-name">- Sue Stricker, softball coach</p>
         </div>
         <div class="testimonial">
@@ -121,7 +121,7 @@ function Home(props) {
       <div className='contact-section'>
       <div className='contact-info'>
           <p className='label'>Send an email:</p>
-          <input type="text" className='data' id='mailInput' value='dowell2transformdev@gmail.com' readOnly={true} />
+          <input type="text" className='data' id='mailInput' value='dowell2transform@gmail.com' readOnly={true} />
       </div>
       <div className='contact-info'>
           <p className='label'>Call or Text:</p>
