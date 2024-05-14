@@ -11,6 +11,7 @@ import zenImg from '../../images/zen-rocks.jpg'
 let emailSendTo = "dowell2transform@gmail.com"
 function sendEmail(data) {
   let link = `mailto:${emailSendTo}?subject=${data.name}'s Inquiry&body=${data.message}`
+  link = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailSendTo}&su=${data.name}'s Inquiry&body=${data.message}`
     // window.scrollTo(0,0)
     window.open(link, "_blank");
 }
@@ -121,6 +122,7 @@ function Home(props) {
       <div className='contact-section'>
       <div className='contact-info'>
           <p className='label'>Send an email:</p>
+          <a href={emailSendTo} >Email</a>
           <input type="text" className='data' id='mailInput' value={emailSendTo} readOnly={true} />
       </div>
       <div className='contact-info'>
