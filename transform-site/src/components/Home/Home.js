@@ -8,9 +8,9 @@ import wholeImg from '../../images/wholeistic.jpg'
 import testImg from '../../images/train-partners-circle.jpg'
 import zenImg from '../../images/zen-rocks.jpg'
 // import {Email} from 'https://smtpjs.com/v3/smtp.js'
-
+let emailSendTo = "dowell2transform@gmail.com"
 function sendEmail(data) {
-  let link = `mailto:dowell2transformdev@gmail.com?subject=${data.name}'s Inquiry&body=${data.message}`
+  let link = `mailto:${emailSendTo}?subject=${data.name}'s Inquiry&body=${data.message}`
     // window.scrollTo(0,0)
     window.open(link, "_blank");
 }
@@ -121,7 +121,7 @@ function Home(props) {
       <div className='contact-section'>
       <div className='contact-info'>
           <p className='label'>Send an email:</p>
-          <input type="text" className='data' id='mailInput' value='dowell2transform@gmail.com' readOnly={true} />
+          <input type="text" className='data' id='mailInput' value={emailSendTo} readOnly={true} />
       </div>
       <div className='contact-info'>
           <p className='label'>Call or Text:</p>
